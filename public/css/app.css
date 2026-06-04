@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar  {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    padding:20px;
+}
+.nav-link{
+    color: #ffffff !important;
+}
