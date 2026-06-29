@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function homefunc()
     {
-        return view('home');
+        return view('pages.home');
     }
 }

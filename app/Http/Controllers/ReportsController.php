@@ -5,32 +5,33 @@ namespace App\Http\Controllers;
 use App\Models\Income;
 use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
 
-class DashboardController extends Controller
+class ReportsController extends Controller
 {
-    public function dashboard()
+    public function reportsFunc()
     {
         $user = Auth::user();
         
-        // Get all income records (Cr_Dr = 'cr')
-        $incomes = Income::with('category')->where('user_id', $user->id)
+        // Get all income records (Cr_Dr = 'cr' means credit/income)
+        $incomes = Income::where('user_id', $user->id)
                           ->where('Cr_Dr', 'cr')
                           ->orderBy('Cr_date', 'desc')
                           ->get();
         
-        // Get all expense records (Cr_Dr = 'dr')
-        $expenses = Income::with('category')->where('user_id', $user->id)
+        // Get all expense records (Cr_Dr = 'dr' means debit/expense)
+        $expenses = Income::where('user_id', $user->id)
                           ->where('Cr_Dr', 'dr')
-                          ->orderBy('Dr_date', 'asc')
+                          ->orderBy('Dr_date', 'desc')
                           ->get();
         
         // Calculate totals
         $totalIncome = $incomes->sum('amount');
         $totalExpenses = $expenses->sum('amount');
-        $totalBalance = $totalIncome - $totalExpenses;
-        $savingsRate = $totalIncome > 0 ? ($totalBalance / $totalIncome) * 100 : 0;
+        $netSavings = $totalIncome - $totalExpenses;
+        $savingsRate = $totalIncome > 0 ? ($netSavings / $totalIncome) * 100 : 0;
         
-        // Combine and sort recent transactions (last 5)
+        // Combine and sort recent transactions
         $recentTransactions = collect()
             ->merge($incomes->map(function($item) {
                 $item->type = 'Income';
@@ -43,14 +44,15 @@ class DashboardController extends Controller
                 return $item;
             }))
             ->sortByDesc('date')
-            ->take(5);
+            ->take(10);
         
-        // Get expense breakdown by category with category names
+        // Get expense categories with names
         $expenseCategories = Category::where('user_id', $user->id)
                                      ->where('category_type', 'Expense')
                                      ->get()
                                      ->keyBy('id');
         
+        // Get expense breakdown by category with category names
         $expenseByCategory = $expenses->groupBy('category_id')
                                       ->map(function($group) use ($expenseCategories) {
                                           $categoryId = $group[0]->category_id;
@@ -63,43 +65,15 @@ class DashboardController extends Controller
                                           ];
                                       });
         
-        // Calculate average monthly values
-        $incomeCount = $incomes->count();
-        $expenseCount = $expenses->count();
-        $avgIncome = $incomeCount > 0 ? $totalIncome / $incomeCount : 0;
-        $avgExpense = $expenseCount > 0 ? $totalExpenses / $expenseCount : 0;
-
-
-        $monthlyExpenseData = $expenses
-            ->groupBy(function ($item) {
-                return \Carbon\Carbon::parse($item->Dr_date)->format('M');
-            })
-            ->map(function ($group) {
-                return $group->sum('amount');
-            });
-
-        // Labels & Values
-        $labels = $monthlyExpenseData->keys()->values();
-        $values = $monthlyExpenseData->values();
-
-
-        // dump($recentTransactions);
-    
-        
-        return view('personal', [
-            'totalBalance' => $totalBalance,
+        return view('reports', [
             'totalIncome' => $totalIncome,
             'totalExpenses' => $totalExpenses,
+            'netSavings' => $netSavings,
             'savingsRate' => $savingsRate,
             'recentTransactions' => $recentTransactions,
             'expenseByCategory' => $expenseByCategory,
             'incomes' => $incomes,
-            'expenses' => $expenses,
-            'avgIncome' => $avgIncome,
-            'avgExpense' => $avgExpense,
-            'labels' => $labels,
-            'values' => $values,
+            'expenses' => $expenses
         ]);
     }
 }
- 

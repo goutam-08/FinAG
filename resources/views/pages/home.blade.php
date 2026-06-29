@@ -133,7 +133,7 @@
         </div>
     </section>
     {{-- features section --}}
-    <section class="features-section " for="features">
+    <section class="features-section " id="features">
 
         <div class="container">
 
