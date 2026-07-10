@@ -1,32 +1,22 @@
 @extends('layouts.guest')
-
 @section('content')
     <div class="container-fluid vh-100">
         <div class="row h-100">
-
             <!-- Left Section -->
             <div class="col-lg-6 d-none d-lg-flex align-items-center justify-content-center login-left">
-
                 <div class="text-center text-white">
-
-                    <img src="{{ asset('image/fml_logo.png') }}" width="120">
-
+                    <img src="{{ asset('image/logo.png') }}" class="m-4" alt="logo" >
                     <h1 class="fw-bold mt-4">
-                        Welcome to FinsAG
+                        Welcome to FinAG
                     </h1>
-
                     <p class="mt-3">
                         Manage income, expenses, budgets and goals
                         in one powerful dashboard.
                     </p>
-
                 </div>
-
             </div>
-
             <!-- Right Section -->
             <div class="col-lg-6 d-flex align-items-center justify-content-center">
-
                 <div class="login-card">
                     @if (session('success'))
                         <div class="alert alert-success alert-dismissible fade show" role="alert">

@@ -9,7 +9,6 @@
     </div>
     {{-- Income page row content --}}
     <div class="row">
-
         <div class="col md-3 mb-4">
             <div class="card border-left-primary shadow h-100 py-2">
                 <div class="card-body">

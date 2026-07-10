@@ -56,7 +56,7 @@ li.list-group-item.active {
 }
 /* .dashboard-card-row  */
 .summary-card {
-    background: #fff;
+    background: #ffffff;
     border-radius: 18px;
     padding: 24px;
     box-shadow: 0 3px 15px rgba(0, 0, 0, .06);
@@ -395,21 +395,6 @@ li.list-group-item.active {
     right: -50px;
     z-index: -1;
 }
-/* Profile Circle */
-.profile-circle {
-    width: 120px;
-    height: 120px;
-    margin: auto;
-    border-radius: 50%;
-    border: 2px solid #22c55e;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #22c55e;
-    font-size: 42px;
-    background:
-        rgba(34, 197, 94, .08);
-}
 /* Heading */
 .register-card h2 {
     color: white;
@@ -663,6 +648,7 @@ li.list-group-item.active {
     background-color: #071431;
     color: white;
 }
+/* income page ka card section */
 
 
 
@@ -1036,4 +1022,600 @@ li.list-group-item.active {
 .section-title {
     margin-bottom: 20px;
     font-weight: 600;
+}
+/* Budget wala css yaha se start hai */
+/* ==========================
+        Budget Header
+========================== */
+
+.budget-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+/* Left Side */
+
+.page-title {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.page-subtitle {
+    color: #9ca3af;
+    font-size: 16px;
+    margin: 0;
+}
+
+/* Right Side */
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Month Select */
+
+.month-select {
+    position: relative;
+}
+
+.month-select i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+    font-size: 18px;
+}
+
+.month-select .form-select {
+
+    width: 210px;
+    height: 50px;
+
+    background: #101a2d;
+    border: 1px solid #243247;
+
+    color: #fff;
+
+    padding-left: 45px;
+
+    border-radius: 12px;
+
+    box-shadow: none;
+}
+
+.month-select .form-select:focus {
+
+    border-color: #22c55e;
+
+    box-shadow: 0 0 10px rgba(34, 197, 94, .35);
+
+}
+
+/* Button */
+
+.add-budget-btn {
+
+    height: 50px;
+
+    padding: 0 25px;
+
+    background: #16a34a;
+
+    color: #fff;
+
+    border: none;
+
+    border-radius: 12px;
+
+    font-weight: 600;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    transition: .3s;
+
+}
+
+.add-budget-btn:hover {
+
+    background: #15803d;
+
+    transform: translateY(-2px);
+
+    color: #fff;
+
+    box-shadow: 0 10px 20px rgba(34, 197, 94, .35);
+
+}
+
+.add-budget-btn i {
+
+    font-size: 18px;
+
+}
+
+/* Responsive */
+
+@media(max-width:992px) {
+
+    .budget-header {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+
+    }
+
+    .header-right {
+
+        width: 100%;
+
+        flex-wrap: wrap;
+
+    }
+
+    .month-select {
+
+        width: 100%;
+
+    }
+
+    .month-select .form-select {
+
+        width: 100%;
+
+    }
+
+}
+/*==========================
+      Budget Cards
+==========================*/
+
+.budget-card {
+
+    background: #111c2e;
+
+    border: 1px solid #1d2b42;
+
+    border-radius: 18px;
+
+    padding: 24px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: .35s;
+
+    height: 150px;
+
+}
+
+.budget-card:hover {
+    transform: translateY(-6px);
+    border-color: #2ecc71;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .35);
+}
+
+/* Card Top */
+
+.card-top {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+}
+
+.card-top h6 {
+    color: #b7c0d4;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.card-top h2 {
+    color: #fff;
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.card-top p {
+    color: #8d97ab;
+    margin: 0;
+}
+
+/* Icon */
+
+.icon-box {
+
+    width: 62px;
+
+    height: 62px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #fff;
+
+    font-size: 28px;
+
+}
+
+.green {
+
+    background: linear-gradient(135deg, #16a34a, #22c55e);
+
+}
+
+.blue {
+
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+
+}
+
+.purple {
+
+    background: linear-gradient(135deg, #7c3aed, #9333ea);
+
+}
+
+.orange {
+
+    background: linear-gradient(135deg, #ea580c, #f97316);
+
+}
+
+/* Decorative Graph */
+
+.card-graph {
+
+    position: absolute;
+
+    right: -15px;
+
+    bottom: -5px;
+
+    width: 130px;
+
+    height: 65px;
+
+    opacity: .45;
+
+}
+
+/* Green */
+
+.graph-green {
+
+    background: linear-gradient(90deg,
+            transparent,
+            #22c55e);
+
+    clip-path: polygon(0% 80%,
+            20% 70%,
+            40% 75%,
+            60% 35%,
+            80% 10%,
+            100% 40%,
+            100% 100%,
+            0 100%);
+}
+
+/* Blue */
+
+.graph-blue {
+
+    background: linear-gradient(90deg,
+            transparent,
+            #3b82f6);
+
+    clip-path: polygon(0% 70%,
+            20% 55%,
+            40% 75%,
+            60% 35%,
+            80% 55%,
+            100% 25%,
+            100% 100%,
+            0% 100%);
+}
+
+/* Purple */
+
+.graph-purple {
+
+    background: linear-gradient(90deg,
+            transparent,
+            #9333ea);
+    clip-path: polygon(0% 90%,
+            20% 70%,
+            40% 65%,
+            60% 30%,
+            80% 45%,
+            100% 20%,
+            100% 100%,
+            0% 100%);
+}
+/* Orange */
+.graph-orange {
+    background: linear-gradient(90deg,
+            transparent,
+            #f97316);
+    clip-path: polygon(0% 85%,
+            20% 75%,
+            40% 60%,
+            60% 40%,
+            80% 20%,
+            100% 35%,
+            100% 100%,
+            0% 100%);
+}
+/*============================
+Dashboard Card
+=============================*/
+
+.dashboard-card {
+    /* background: #111c2e; */
+    border: 1px solid #1e2d43;
+    border-radius: 18px;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+/* Header */
+.card-header-custom {
+    margin-bottom: 25px;
+}
+.card-header-custom h4 {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+}
+/*============================
+Table
+=============================*/
+
+.budget-table {
+
+    color: #d8dde9;
+
+}
+
+.budget-table thead {
+
+    border-bottom: 1px solid #22324a;
+
+}
+
+.budget-table th {
+
+    color: #9ca3af;
+
+    font-weight: 600;
+
+    border: none;
+
+}
+
+.budget-table td {
+
+    border-top: 1px solid #22324a;
+
+    vertical-align: middle;
+
+}
+
+/*============================
+Category Icon
+=============================*/
+
+.category {
+
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 10px;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-right: 10px;
+
+    color: #fff;
+
+}
+
+.food {
+
+    background: #16a34a;
+
+}
+
+.transport {
+
+    background: #f59e0b;
+
+}
+
+.shopping {
+
+    background: #2563eb;
+
+}
+
+/*============================
+Progress
+=============================*/
+
+.custom-progress {
+
+    height: 8px;
+
+    background: #1b2a40;
+
+    border-radius: 20px;
+
+    margin-bottom: 6px;
+
+}
+
+.progress-bar {
+
+    border-radius: 20px;
+
+}
+
+/*============================
+Tips
+=============================*/
+.tips-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+.tips-box i {
+    font-size: 24px;
+    color: #fff;
+}
+.tips-box h6 {
+    color: #fff;
+    margin-bottom: 5px;
+}
+.tips-box p {
+    color: #b5c0d0;
+    margin: 0;
+}
+.success {
+    background: rgba(34, 197, 94, .15);
+}
+.warning {
+    background: rgba(249, 115, 22, .15);
+}
+.primary {
+    background: rgba(59, 130, 246, .15);
+}
+/*=============================
+Bottom Section
+=============================*/
+
+.view-all {
+
+    color: #22c55e;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+}
+
+.view-all:hover {
+
+    color: #16a34a;
+
+}
+
+.form-label {
+
+    color: #d8dde9;
+
+    margin-bottom: 10px;
+
+}
+
+/* Inputs */
+
+.custom-input {
+
+    background: #0f172a;
+
+    border: 1px solid #243247;
+
+    color: #fff;
+
+    height: 52px;
+
+    border-radius: 12px;
+
+}
+
+.custom-input:focus {
+
+    background: #0f172a;
+
+    color: #fff;
+
+    border-color: #22c55e;
+
+    box-shadow: none;
+
+}
+
+/* Select */
+
+.custom-input option {
+
+    background: #111827;
+
+    color: #fff;
+
+}
+
+/* Button */
+
+.btn-budget {
+
+    background: #16a34a;
+
+    color: #fff;
+
+    height: 54px;
+
+    border-radius: 12px;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    border: none;
+
+    transition: .3s;
+
+}
+
+.btn-budget:hover {
+
+    background: #15803d;
+
+    color: #fff;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 15px 35px rgba(34, 197, 94, .35);
+
 }

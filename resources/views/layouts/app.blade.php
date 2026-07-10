@@ -19,26 +19,6 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.datatables.net/2.3.2/js/dataTables.js"></script>
     <script src="https://cdn.datatables.net/2.3.2/js/dataTables.bootstrap5.js"></script>
-    {{-- 
-    <style>
-        .sidebar {
-            min-height: 100vh;
-        }
-
-        /* .sidebar a {
-            text-decoration: none;
-            color: #333;
-        } */
-
-        .navbar {
-            position: relative;
-            z-index: 1050;
-        }
-
-        .dropdown-menu {
-            z-index: 2000;
-        }
-    </style> --}}
 </head>
 
 <body>
@@ -201,7 +181,8 @@
                 @else
                     <div class="col-md-10">
             @endif --}}
-            <div class="col-md-10 {{ request()->is('settings*', 'transactions*', 'expense*') ? 'setting-bg' : '' }}">
+            <div
+                class="col-md-10 {{ request()->is('settings*', 'transactions*', 'expense*', 'budget*') ? 'setting-bg' : '' }}">
 
                 @yield('content')
 
@@ -220,9 +201,8 @@
     <!-- Chart JS -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <script src="{{ asset('assets/js/dashboard.js') }}"></script>
-
-
+    {{-- <script src="{{ asset('assets/js/dashboard.js') }}"></script> --}}
+    @yield('scripts')
 </body>
 
 </html>

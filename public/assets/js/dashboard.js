@@ -1,6 +1,7 @@
-if (window.disableDashboardDefaultCharts) {
-    return;
-}
+console.log("Dashboard JS Loaded");
+// if (window.disableDashboardDefaultCharts) {
+//     return;
+// }
 
 const ctx = document.getElementById('expenseChart');
 
@@ -98,3 +99,23 @@ if (categoryCtx && !Chart.getChart(categoryCtx)) {
         }
     });
 }
+
+// budget page ka graph
+document.addEventListener("DOMContentLoaded", function () {
+
+    const ctx = document.getElementById("budgetChart");
+
+    if (!ctx) return;
+
+    new Chart(ctx, {
+        type: "doughnut",
+        data: {
+            labels: ["Food", "Shopping", "Transport"],
+            datasets: [{
+                label: "Budget",
+                data: [10000, 8000, 5000]
+            }]
+        }
+    });
+
+});

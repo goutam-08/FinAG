@@ -48,8 +48,6 @@
 
                     <h4 class="section-title">Profile Information</h4>
                     <form action="{{ route('profile.update') }}" method="POST" enctype="multipart/form-data">
-
-
                         <div class="row">
 
                             <div class="col-lg-3 text-center">

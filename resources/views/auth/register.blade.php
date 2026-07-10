@@ -1,25 +1,19 @@
-@extends('layouts.guest')
-
-
+@extends('layouts.guests.guestheader')
 @section('content')
-    <div class="container-fluid register-page">
-        <div class="row min-vh-100">
 
-
+    <div class="container-fluid register-page ">
+        <div class="row ">
             <!-- Left Side -->
             <div class="col-lg-6 left-panel d-none d-lg-flex">
-
                 <div>
                     <h1>
                         Smart Tracking <br>
                         <span>Better Finances</span>
                     </h1>
-
                     <p class="mt-4">
                         Join thousands of users who are taking control of
                         their income, expenses and financial goals.
                     </p>
-
                     <div class="feature-item">
                         <i class="bi bi-graph-up-arrow"></i>
                         <div>
@@ -27,7 +21,6 @@
                             <small>Manage all transactions easily.</small>
                         </div>
                     </div>
-
                     <div class="feature-item">
                         <i class="bi bi-wallet2"></i>
                         <div>
@@ -35,7 +28,6 @@
                             <small>Set monthly budgets and goals.</small>
                         </div>
                     </div>
-
                     <div class="feature-item">
                         <i class="bi bi-pie-chart"></i>
                         <div>
@@ -50,20 +42,15 @@
             <!-- Right Side -->
             <div class="col-lg-6 d-flex align-items-center justify-content-center">
 
-                <div class="register-card">
+                <div class="register-card  ">
 
-                    <div class="text-center mb-4">
+                    <div class="text-center mb-2">
 
-                        <div class="profile-circle mb-4">
-                            <i class="bi bi-person-plus"></i>
-                        </div>
-
+                        <div> <img src="{{ asset('image/logo.png') }}" alt="logo" height="55"></div>
                         <h2>Create Account</h2>
-
                         <p class="text-light">
                             Create your financial account
                         </p>
-
                         @if (session('success'))
                             <div class="alert alert-success">
                                 {{ session('success') }}
@@ -98,7 +85,7 @@
                         <input type="password" name="password" class="form-control custom-input mb-3"
                             placeholder="Password">
 
-                        <input type="password" name="confirmed" class="form-control custom-input mb-4"
+                        <input type="password" name="confirmed" class="form-control custom-input mb-3"
                             placeholder="Confirm Password">
 
                         <button type="submit" class="btn register-btn">

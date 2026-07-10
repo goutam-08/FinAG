@@ -12,10 +12,24 @@ use App\Http\Controllers\ReportsController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\TransactionsController;
 use App\Http\Controllers\UpgradeController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/login', [AuthController::class, 'login'])->name('login');
-Route::get('/register', [AuthController::class, 'register'])->name('register');
+Route::get('/login', function () {
+    if (Auth::check()) {
+        return redirect()->route('dashboard');
+    }
+
+    return app(AuthController::class)->login();
+})->name('login');
+
+Route::get('/register', function () {
+    if (Auth::check()) {
+        return redirect()->route('dashboard');
+    }
+
+    return app(AuthController::class)->register();
+})->name('register');
 
 Route::post('/login', [AuthController::class, 'loginPost'])->name('login.post');
 Route::post('/register', [AuthController::class, 'registerPost'])->name('register.post');
@@ -23,7 +37,7 @@ Route::post('/register', [AuthController::class, 'registerPost'])->name('registe
 Route::get('/logout', [AuthController::class, 'logout']);
 Route::middleware('auth')->group(function () {
 
-    Route::get('/dashboard', [DashboardController::class, 'dashboard']);
+    Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
     Route::get('/income', [IncomeController::class, 'income']);
     Route::get('/categories', [CategoriesController::class, 'categories']);
     Route::get('/budgets', [BudgetsController::class, 'budgets']);
