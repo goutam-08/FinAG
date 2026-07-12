@@ -12,13 +12,9 @@ body {
             #02152f,
             #03234d,
             #02152f);
-
     backdrop-filter: blur(15px);
-
     padding: 18px 0;
-
     border-bottom: 1px solid rgba(255, 255, 255, .08);
-
     position: sticky;
     top: 0;
     z-index: 999;

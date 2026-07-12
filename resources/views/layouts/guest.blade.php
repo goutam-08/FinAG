@@ -41,13 +41,13 @@
                             <a class="nav-link" href="#features" id="feature">Features</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
+                            <a class="nav-link" href="/pricing">Pricing</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About Us</a>
+                            <a class="nav-link" href="/about">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="/contact">Contact</a>
                         </li>
                     </ul>
                     <div class="d-flex gap-3">
@@ -122,7 +122,7 @@
 
                         <a href="#"><i class="bi bi-twitter-x"></i></a>
 
-                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="mr.goutam_08_official"><i class="bi bi-instagram"></i></a>
 
                         <a href="#"><i class="bi bi-linkedin"></i></a>
 

@@ -12,8 +12,12 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
+    
     <link rel="stylesheet" href="https://cdn.datatables.net/2.3.2/css/dataTables.bootstrap5.css">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -167,7 +171,7 @@
                     <img src="image/fml_logo.png" width="50" height="38">
                     <h6 class="mt-2">Go Premium</h6>
                     <p>Unlock more features and advanced reports</p>
-                    <button class="btn btn-success">Upgrade Now</button>
+                    <a href="/upgrade" class="btn btn-success">Upgrade Now</a>
                 </div>
                 <div class="mt-4 text-center text-muted copyright">
                     <p>&copy; 2026 YourCompany. All rights reserved.</p>

@@ -36,7 +36,7 @@
 
                     <div class="hero-buttons">
 
-                        <a href="#" class="btn-start">
+                        <a href="dashboard" class="btn-get-started">
 
                             Get Started Free
 

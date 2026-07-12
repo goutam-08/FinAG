@@ -12,6 +12,8 @@ use App\Http\Controllers\ReportsController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\TransactionsController;
 use App\Http\Controllers\UpgradeController;
+use App\Http\Controllers\PricingController;
+use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -47,6 +49,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/upgrade', [UpgradeController::class, 'upgradeFunc']);
     Route::get('/reports', [ReportsController::class, 'reportsFunc']);
     Route::get('/settings', [SettingsController::class, 'settingsFunc']);
+    Route::get('/pricing', [PricingController::class, 'pricingFunc']);
+    Route::get('/about', [AboutController::class, 'aboutFunc']);
 
     // Route::get('/login', [AnalyticsController::class, 'login']);
 
