@@ -15,11 +15,6 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
-<<<<<<< HEAD
-=======
-        'category',
-        'profile_img',
->>>>>>> e4aed93ca13b44b42deb6c794b45e2374178a506
         'mobile_num',
         'profile_img',
         'dob',
