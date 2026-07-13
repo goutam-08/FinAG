@@ -35,11 +35,11 @@
                     <ul class="navbar-nav mx-auto">
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="/">Home</a>
+                            <a class="nav-link " href="/">Home</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="#features" id="feature">Features</a>
+                            <a class="nav-link " href="#features" id="feature">Features</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/pricing">Pricing</a>

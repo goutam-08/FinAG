@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Budgets extends Model
+class Budget extends Model
 {
     protected $table = 'budgets';
 

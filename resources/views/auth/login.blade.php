@@ -5,7 +5,7 @@
             <!-- Left Section -->
             <div class="col-lg-6 d-none d-lg-flex align-items-center justify-content-center login-left">
                 <div class="text-center text-white">
-                    <img src="{{ asset('image/logo.png') }}" class="m-4" alt="logo" >
+                    <img src="{{ asset('image/logo.png') }}" class="m-4 " alt="logo" height="100px">
                     <h1 class="fw-bold mt-4">
                         Welcome to FinAG
                     </h1>

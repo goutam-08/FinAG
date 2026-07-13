@@ -122,7 +122,7 @@
 
                     <div class="hero-dashboard">
 
-                        <img src="{{ asset('image/demo.jpeg') }}" class="img-fluid" alt="Expense Manager Dashboard">
+                        <img src="{{ asset('image/dashboard-mockup.jpeg') }}" class="img-fluid" alt="Expense Manager Dashboard">
 
                     </div>
 

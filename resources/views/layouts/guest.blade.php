@@ -14,6 +14,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
+    {{-- <link rel="stylesheet" href="{{ asset('assets/css/about.css') }}"> --}}
+
 </head>
 
 <body>
@@ -34,20 +36,24 @@
                     <ul class="navbar-nav mx-auto">
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="/">Home</a>
+                            <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="/">Home</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#features" id="feature">Features</a>
+                            <a class="nav-link {{ request()->is('#features') ? 'active' : '' }}" href="#features"
+                                id="feature">Features</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/pricing">Pricing</a>
+                            <a class="nav-link {{ request()->is('pricing') ? 'active' : '' }}"
+                                href="/pricing">Pricing</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/about">About Us</a>
+                            <a class="nav-link {{ request()->is('about') ? 'active' : '' }}" href="/about">About
+                                Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/contact">Contact</a>
+                            <a class="nav-link {{ request()->is('/contact') ? 'active' : '' }}"
+                                href="/contact">Contact</a>
                         </li>
                     </ul>
                     <div class="d-flex gap-3">
@@ -122,7 +128,8 @@
 
                         <a href="#"><i class="bi bi-twitter-x"></i></a>
 
-                        <a href="mr.goutam_08_official"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.instagram.com/mr.goutam_08_official?igsh=MWViNjU4ZHZ2N2M2aw=="><i
+                                class="bi bi-instagram"></i></a>
 
                         <a href="#"><i class="bi bi-linkedin"></i></a>
 
@@ -137,11 +144,11 @@
 
                     <ul class="footer-links">
 
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Features</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/features">Features</a></li>
+                        <li><a href="/pricing">Pricing</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/contact">Contact</a></li>
 
                     </ul>
 
@@ -154,11 +161,11 @@
 
                     <ul class="footer-links">
 
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms & Conditions</a></li>
-                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/help">Help Center</a></li>
+                        <li><a href="/privacy">Privacy Policy</a></li>
+                        <li><a href="/terms">Terms & Conditions</a></li>
+                        <li><a href="/refund">Refund Policy</a></li>
 
                     </ul>
 
@@ -178,7 +185,7 @@
 
                         <li>
                             <i class="bi bi-telephone-fill"></i>
-                            +91 9876543210
+                            +91 9304449673
                         </li>
 
                         <li>

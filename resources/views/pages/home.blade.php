@@ -122,7 +122,7 @@
 
                     <div class="hero-dashboard">
 
-                        <img src="{{ asset('image/demo.jpeg') }}" class="img-fluid" alt="Expense Manager Dashboard">
+                        <img src="{{ asset('image/dashboard-mockup.jpeg') }}" class="img-fluid pt-0" alt="Expense Manager Dashboard" height="400">
 
                     </div>
 
@@ -297,7 +297,7 @@
 
                     <div class="dashboard-preview">
 
-                        <img src="{{ asset('image/demo.jpeg') }}" alt="Dashboard Preview" class="img-fluid">
+                        <img src="{{ asset('image/dashboardlook.png/') }}" alt="Dashboard Preview" class="img-fluid">
 
                         <!-- Floating Card -->
 

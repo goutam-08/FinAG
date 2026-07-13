@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\AnalyticsController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BudgetsController;
@@ -8,12 +9,12 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ExpenseController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IncomeController;
+use App\Http\Controllers\PricingController;
+use App\Http\Controllers\PrivacyPolicyController;
 use App\Http\Controllers\ReportsController;
 use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\TransactionsController;
 use App\Http\Controllers\UpgradeController;
-use App\Http\Controllers\PricingController;
-use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -42,15 +43,14 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
     Route::get('/income', [IncomeController::class, 'income']);
     Route::get('/categories', [CategoriesController::class, 'categories']);
-    Route::get('/budgets', [BudgetsController::class, 'budgets']);
+    Route::get('/budgets', [BudgetsController::class, 'budgets'])->name('budgets.index');
+    Route::post('/budgets', [BudgetsController::class, 'store'])->name('budgets.store');
     Route::get('/expenses', [ExpenseController::class, 'expense']);
     Route::get('/analytics', [AnalyticsController::class, 'analytics']);
     Route::get('/goals', [AnalyticsController::class, 'goals']);
     Route::get('/upgrade', [UpgradeController::class, 'upgradeFunc']);
     Route::get('/reports', [ReportsController::class, 'reportsFunc']);
     Route::get('/settings', [SettingsController::class, 'settingsFunc']);
-    Route::get('/pricing', [PricingController::class, 'pricingFunc']);
-    Route::get('/about', [AboutController::class, 'aboutFunc']);
 
     // Route::get('/login', [AnalyticsController::class, 'login']);
 
@@ -95,3 +95,6 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/home', [HomeController::class, 'homefunc']);
 Route::get('/', [HomeController::class, 'homefunc']);
+Route::get('/pricing', [PricingController::class, 'pricingFunc']);
+Route::get('/about', [AboutController::class, 'aboutFunc']);
+Route::get('/privacy', [PrivacyPolicyController::class, 'privacyPolicyFunc']);

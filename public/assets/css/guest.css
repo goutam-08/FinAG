@@ -87,6 +87,14 @@ body {
     box-shadow:
         0 0 15px rgba(16, 185, 129, .4);
 }
+.navbar-toggler-icon{
+    color: white !important;
+}
+.navbar-toggler{
+    border: 1px solid rgba(255, 255, 255, 0.50)!important;
+    border-radius: 14px 14px 14px 14px !important;
+    color: #f8fafc !important;
+}
 
 /* Register */
 
