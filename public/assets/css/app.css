@@ -1,59 +1,67 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-.navbar  {
-background: linear-gradient(180deg,
+.navbar {
+    background: linear-gradient(180deg,
             #0F172A 0%,
             #081122 100%) !important;
     border: none !important;
-   
+
 }
-.copyright p{
+
+.copyright p {
     margin-top: 20px;
     font-size: 14px;
     color: white;
 }
-.nav-link{
-    color: #ffffff !important; 
-  
- }
+
+.nav-link {
+    color: #ffffff !important;
+
+}
+
 /* sidebar */
 .sidebar {
     background: linear-gradient(180deg,
             #0F172A 0%,
             #081122 100%) !important;
-            border:none !important;
-      
+    border: none !important;
+
 }
-.list-group-item{
+
+.list-group-item {
     background: linear-gradient(180deg,
-                #0F172A 0%,
-                #081122 100%) !important;
-        border: none !important;
-        border-radius: 12px;
-            margin-bottom: 8px;
-            transition: .5s;
+            #0F172A 0%,
+            #081122 100%) !important;
+    border: none !important;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    transition: .5s;
 }
-.list-group-item:hover{ 
+
+.list-group-item:hover {
     background: #30ce3b !important;
     border: none !important;
     border-radius: 5px !important;
-    
+
 }
-.list-group-item a{
-    color:#ffffff ;
+
+.list-group-item a {
+    color: #ffffff;
     text-decoration: none;
     font-weight: 500;
     display: block;
 }
+
 /* Active  */
 li.list-group-item.active {
     background: #30ce3b !important;
     border: none !important;
     border-radius: 5px !important;
 }
+
 /* .dashboard-card-row  */
 .summary-card {
     background: #ffffff;
@@ -155,132 +163,177 @@ li.list-group-item.active {
         font-size: 24px;
     }
 }
-   /* Main White Card Container */
-  .dashboard-monthly-summ-card {
-    
-       border-radius: 10px;
-       border: none;
-       max-width: 400px;
-       width: 100%;
-       padding: 1.75rem;    
-       background: rgba(255, 255, 255, .8);
-       backdrop-filter: blur(20px);
 
-   } 
-    
+.home-nav-btn {
+    background-color: #16a34a;
+    border: 0;
+    border-radius: 10px;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(22, 163, 74, 0.2);
+    font-weight: 600;
+    height: 42px;
+    padding: 0 24px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
 
-   .heading-text {
-       color: #0f172a;
-       font-weight: 700;
-       font-size: 1.3rem;
-   }
+.home-nav-btn:hover {
+    background-color: #15803d;
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 16px rgba(22, 163, 74, 0.25);
+}
 
-   /* Dropdown Select Styling */
-   .date-select {
-       font-size: 0.85rem;
-       font-weight: 600;
-       color: #334155;
-       border: 1px solid #e2e8f0;
-       border-radius: 8px;
-       padding: 0.35rem 0.75rem;
-       background-color: #fff;
-   }
+.home-nav-btn__icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
 
-   /* Metric Typography */
-   .metric-label {
-       font-size: 0.9rem;
-       color: #64748b;
-       font-weight: 600;
-       margin-bottom: 2px;
-   }
+@media (max-width: 991.98px) {
+    .home-nav-btn {
+        height: 40px;
+        padding: 0 16px;
+    }
+}
 
-   .metric-amount {
-       font-size: 1.25rem;
-       font-weight: 700;
-       width: 110px;
-       /* Fixed width to keep progress bars aligned */
-   }
+@media (max-width: 576px) {
+    .home-nav-btn {
+        height: 38px;
+        padding: 0 14px;
+        font-size: 0.9rem;
+    }
+}
 
-   /* Metric Colors */
-   .text-income {
-       color: #10b981;
-   }
+/* Main White Card Container */
+.dashboard-monthly-summ-card {
 
-   .text-expense {
-       color: #ef4444;
-   }
+    border-radius: 10px;
+    border: none;
+    max-width: 400px;
+    width: 100%;
+    padding: 1.75rem;
+    background: rgba(255, 255, 255, .8);
+    backdrop-filter: blur(20px);
 
-   .text-savings {
-       color: #3b82f6;
-   }
+}
 
-   /* Custom Progress Bars */
-   .custom-progress-container {
-       flex-grow: 1;
-       margin-right: 1rem;
-   }
 
-   .progress {
-       height: 8px;
-       background-color: #f8fafc;
-       /* Very light track color */
-       border-radius: 10px;
-       overflow: visible;
-   }
+.heading-text {
+    color: #0f172a;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
 
-   .progress-bar {
-       border-radius: 10px;
-   }
+/* Dropdown Select Styling */
+.date-select {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #334155;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 0.35rem 0.75rem;
+    background-color: #fff;
+}
 
-   .percentage-text {
-       font-size: 0.9rem;
-       font-weight: 600;
-       color: #1e293b;
-       min-width: 35px;
-       text-align: right;
-   }
+/* Metric Typography */
+.metric-label {
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
 
-   /* Bottom Savings Rate Card (from image_aef783.png) */
-   .savings-card {
-       background-color: #eaf7f2;
-       border-radius: 16px;
-       border: none;
-       padding: 1.25rem;
-       margin-top: 1.5rem;
-        /* background: rgba(255, 255, 255, .65); */
-            backdrop-filter: blur(15px);
-            border-radius: 20px;
-            overflow: hidden;
-            transition: .3s;
-   }
+.metric-amount {
+    font-size: 1.25rem;
+    font-weight: 700;
+    width: 110px;
+    /* Fixed width to keep progress bars aligned */
+}
 
-   .card-title-text {
-       color: #111827;
-       font-weight: 700;
-       font-size: 1.15rem;
-   }
+/* Metric Colors */
+.text-income {
+    color: #10b981;
+}
 
-   .card-desc-text {
-       color: #4b5563;
-       font-weight: 500;
-       font-size: 0.9rem;
-   }
+.text-expense {
+    color: #ef4444;
+}
 
-   .savings-percentage {
-       color: #10b981;
-       font-weight: 700;
-       font-size: 2rem;
-       line-height: 1;
-   }
+.text-savings {
+    color: #3b82f6;
+}
 
-   .graph-svg {
-       width: 90px;
-       height: auto;
-   }
+/* Custom Progress Bars */
+.custom-progress-container {
+    flex-grow: 1;
+    margin-right: 1rem;
+}
+
+.progress {
+    height: 8px;
+    background-color: #f8fafc;
+    /* Very light track color */
+    border-radius: 10px;
+    overflow: visible;
+}
+
+.progress-bar {
+    border-radius: 10px;
+}
+
+.percentage-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1e293b;
+    min-width: 35px;
+    text-align: right;
+}
+
+/* Bottom Savings Rate Card (from image_aef783.png) */
+.savings-card {
+    background-color: #eaf7f2;
+    border-radius: 16px;
+    border: none;
+    padding: 1.25rem;
+    margin-top: 1.5rem;
+    /* background: rgba(255, 255, 255, .65); */
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.card-title-text {
+    color: #111827;
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+
+.card-desc-text {
+    color: #4b5563;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.savings-percentage {
+    color: #10b981;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.graph-svg {
+    width: 90px;
+    height: auto;
+}
+
 /* income page css */
 .income-mainPage {
     background-color: #0F172A;
 }
+
 /* Registration page css */
 
 
@@ -356,13 +409,16 @@ li.list-group-item.active {
     justify-content: center;
     font-size: 26px;
 }
+
 .feature-item h5 {
     margin-bottom: 5px;
     color: white;
 }
+
 .feature-item small {
     color: #94a3b8;
 }
+
 /* Register Card */
 .register-card {
     width: 100%;
@@ -395,14 +451,17 @@ li.list-group-item.active {
     right: -50px;
     z-index: -1;
 }
+
 /* Heading */
 .register-card h2 {
     color: white;
     font-weight: 700;
 }
+
 .register-card p {
     color: #cbd5e1;
 }
+
 /* Inputs */
 .custom-input {
     height: 58px;
@@ -414,9 +473,11 @@ li.list-group-item.active {
 
     color: white;
 }
+
 .custom-input::placeholder {
     color: #94a3b8;
 }
+
 .custom-input:focus {
     background:
         rgba(255, 255, 255, .05);
@@ -426,6 +487,7 @@ li.list-group-item.active {
         0 0 15px rgba(34, 197, 94, .25);
     color: white;
 }
+
 /* Button */
 .register-btn {
     width: 100%;
@@ -442,48 +504,57 @@ li.list-group-item.active {
     letter-spacing: 1px;
     transition: .4s;
 }
+
 .register-btn:hover {
     transform: translateY(-3px);
     box-shadow:
         0 10px 30px rgba(34, 197, 94, .4);
     color: white;
 }
+
 /* Login Link */
 .login-link {
     text-align: center;
     color: #cbd5e1;
 }
+
 .login-link a {
     color: #22c55e;
     text-decoration: none;
     font-weight: 600;
 }
+
 .login-link a:hover {
     color: #4ade80;
 }
+
 /* Alerts */
 .alert {
     border: none;
     border-radius: 12px;
 }
+
 /* Mobile */
 @media(max-width:991px) {
     .register-card {
         margin: 20px;
         padding: 30px;
     }
+
     .profile-circle {
         width: 90px;
         height: 90px;
         font-size: 30px;
     }
-} 
+}
+
 /* Login */
 .login-left {
     background: linear-gradient(135deg,
             #0F172A,
             #1E293B);
 }
+
 .login-card {
     width: 100%;
     max-width: 450px;
@@ -492,10 +563,12 @@ li.list-group-item.active {
     border-radius: 20px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, .08);
 }
+
 .form-control {
     height: 50px;
     border-radius: 12px;
 }
+
 .btn-login {
     background: #10B981;
     color: white;
@@ -503,14 +576,17 @@ li.list-group-item.active {
     border-radius: 12px;
     font-weight: 600;
 }
+
 .btn-login:hover {
     background: #059669;
     color: white;
 }
+
 /* Reports page CSS here */
-.reports-body{  
-   padding: 10px;
+.reports-body {
+    padding: 10px;
 }
+
 /* ---------- */
 :root {
     --navy: #0F172A;
@@ -520,6 +596,7 @@ li.list-group-item.active {
     --bg: #F8FAFC;
     --card-bg: rgba(255, 255, 255, 0.75);
 }
+
 .dashboard-header {
     background: rgba(255, 255, 255, .7);
     backdrop-filter: blur(15px);
@@ -527,13 +604,16 @@ li.list-group-item.active {
     padding: 20px;
     box-shadow: 0 8px 25px rgba(0, 0, 0, .05);
 }
+
 .card:hover {
     transform: translateY(-6px);
     box-shadow: 0 15px 35px rgba(16, 185, 129, .15);
 }
+
 .dashboard-summary-card {
     position: relative;
 }
+
 .dashboard-summary-card::before {
     content: "";
     position: absolute;
@@ -549,16 +629,17 @@ li.list-group-item.active {
     display: flex;
     justify-content: space-between;
     align-items: center;
-        font-weight: bolder;
+    font-weight: bolder;
 }
 
-.dashboard-card-row .bi-wallet2  {
+.dashboard-card-row .bi-wallet2 {
     font-size: 24px;
     color: #10B981;
-    background-color:rgba(67, 176, 151, 0.317) ;
+    background-color: rgba(67, 176, 151, 0.317);
     padding: 3px 8px;
     border-radius: 10px;
 }
+
 .dashboard-card-row .bi-download {
     font-size: 24px;
     color: #10B981;
@@ -566,6 +647,7 @@ li.list-group-item.active {
     padding: 3px 8px;
     border-radius: 10px;
 }
+
 .dashboard-card-row .bi-upload {
     font-size: 24px;
     color: #b91010;
@@ -574,6 +656,7 @@ li.list-group-item.active {
     padding: 3px 8px;
     border-radius: 10px;
 }
+
 .dashboard-card-row .bi-bank2 {
     font-size: 24px;
     color: #0e70e1;
@@ -582,6 +665,7 @@ li.list-group-item.active {
     padding: 3px 8px;
     border-radius: 10px;
 }
+
 /* .chart-card {
     background: rgba(255, 255, 255, .75);
     backdrop-filter: blur(18px);
@@ -592,6 +676,7 @@ li.list-group-item.active {
 .chart-card:hover {
     box-shadow: 0 15px 30px rgba(0, 0, 0, .08);
 }
+
 .table {
     border-collapse: separate;
     border-spacing: 0 10px;
@@ -610,44 +695,54 @@ li.list-group-item.active {
 .table td {
     vertical-align: middle;
 }
+
 .badge {
     padding: 8px 14px;
     border-radius: 30px;
 }
+
 .bg-danger {
     background: #fee2e2 !important;
     color: #dc2626 !important;
 }
+
 .dashboard-card:hover {
     transform: translateY(-5px);
 }
+
 .progress {
     height: 10px;
     border-radius: 50px;
     background: #e2e8f0;
 }
+
 .progress-bar {
     border-radius: 50px;
 }
+
 .btn-primary {
     background: #10B981;
     border: none;
     border-radius: 12px;
     transition: .3s;
 }
+
 .btn-primary:hover {
     background: #059669;
     transform: translateY(-2px);
 }
+
 .navbar-brand {
     color: white !important;
 }
+
 /* setting */
 
 .setting-bg {
     background-color: #071431;
     color: white;
 }
+
 /* income page ka card section */
 
 
@@ -711,6 +806,7 @@ li.list-group-item.active {
 .bg-primary {
     background: #3b82f6 !important;
 }
+
 .mini-chart {
     position: absolute;
     right: 15px;
@@ -745,6 +841,7 @@ li.list-group-item.active {
     box-shadow:
         0 10px 30px rgba(0, 0, 0, .25);
 }
+
 .filter-input {
     height: 40px;
 
@@ -766,6 +863,7 @@ li.list-group-item.active {
             129,
             .15);
 }
+
 .transaction-table {
     color: white;
 }
@@ -855,6 +953,7 @@ li.list-group-item.active {
 .btn-delete:hover {
     transform: translateY(-2px);
 }
+
 /* Glass Card */
 .glass-card {
     background: rgba(255, 255, 255, 0.04);
@@ -866,12 +965,14 @@ li.list-group-item.active {
         0 10px 30px rgba(0, 0, 0, .35);
     transition: .4s;
 }
+
 .glass-card:hover {
     transform: translateY(-5px);
 
     box-shadow:
         0 15px 40px rgba(0, 255, 128, .15);
 }
+
 /* Tabs */
 .profile-tabs {
     border-bottom: 1px solid rgba(255, 255, 255, .08);
@@ -950,8 +1051,8 @@ li.list-group-item.active {
     object-fit: cover;
     border: 4px solid #00ff88;
     transition: .5s;
-       
-        
+
+
 }
 
 .profile-image:hover {
@@ -1023,6 +1124,7 @@ li.list-group-item.active {
     margin-bottom: 20px;
     font-weight: 600;
 }
+
 /* Budget wala css yaha se start hai */
 /* ==========================
         Budget Header
@@ -1180,6 +1282,7 @@ li.list-group-item.active {
     }
 
 }
+
 /*==========================
       Budget Cards
 ==========================*/
@@ -1356,6 +1459,7 @@ li.list-group-item.active {
             100% 100%,
             0% 100%);
 }
+
 /* Orange */
 .graph-orange {
     background: linear-gradient(90deg,
@@ -1370,6 +1474,7 @@ li.list-group-item.active {
             100% 100%,
             0% 100%);
 }
+
 /*============================
 Dashboard Card
 =============================*/
@@ -1381,15 +1486,18 @@ Dashboard Card
     padding: 25px;
     margin-bottom: 25px;
 }
+
 /* Header */
 .card-header-custom {
     margin-bottom: 25px;
 }
+
 .card-header-custom h4 {
     color: #fff;
     font-size: 22px;
     font-weight: 600;
 }
+
 /*============================
 Table
 =============================*/
@@ -1499,27 +1607,34 @@ Tips
     border-radius: 12px;
     margin-bottom: 15px;
 }
+
 .tips-box i {
     font-size: 24px;
     color: #fff;
 }
+
 .tips-box h6 {
     color: #fff;
     margin-bottom: 5px;
 }
+
 .tips-box p {
     color: #b5c0d0;
     margin: 0;
 }
+
 .success {
     background: rgba(34, 197, 94, .15);
 }
+
 .warning {
     background: rgba(249, 115, 22, .15);
 }
+
 .primary {
     background: rgba(59, 130, 246, .15);
 }
+
 /*=============================
 Bottom Section
 =============================*/

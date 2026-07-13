@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
-    
+
     <link rel="stylesheet" href="https://cdn.datatables.net/2.3.2/css/dataTables.bootstrap5.css">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -26,6 +26,12 @@
 </head>
 
 <body>
+    @php
+        $homeRoute =
+            Auth::check() && in_array(optional(Auth::user())->category, ['Startup', 'Business'], true)
+                ? route('business.home')
+                : route('personal.home');
+    @endphp
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm  sticky-top">
         <div class="container-fluid">
@@ -40,9 +46,18 @@
 
             <div class="collapse navbar-collapse" id="navbarContent">
 
-                <form class="d-flex ms-auto me-3">
-                    <input class="form-control h-50 w-100" type="search" placeholder="Search...">
-                </form>
+                <div class="d-flex align-items-center ms-auto me-3">
+                    <a href="{{ $homeRoute }}"
+                        class="btn home-nav-btn d-flex align-items-center justify-content-center">
+                        <svg class="home-nav-btn__icon" viewBox="0 0 24 24" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-4.5v-6h-7v6H4a1 1 0 0 1-1-1v-9.5Z"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <span>_Go To Home</span>
+                    </a>
+                </div>
 
                 <!-- Profile Dropdown -->
                 <div class="dropdown">

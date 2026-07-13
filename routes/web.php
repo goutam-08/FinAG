@@ -80,6 +80,8 @@ Route::middleware('auth')->group(function () {
 
     // Transaction ka route start
     Route::get('/transactions', [TransactionsController::class, 'index']);
+    Route::get('/home/personal', [HomeController::class, 'personalHome'])->name('personal.home');
+    Route::get('/home/business', [HomeController::class, 'businessHome'])->name('business.home');
     Route::get(
         '/transactions/{id}/edit',
         [TransactionsController::class, 'edit']
