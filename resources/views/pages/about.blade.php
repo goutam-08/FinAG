@@ -1874,7 +1874,7 @@
 
                         <div class="team-img">
 
-                            <img src="{{ asset('image/team3.jpg') }}" alt="">
+                            <img src="{{ asset('image/team2.jpeg') }}" alt="">
 
                         </div>
 
@@ -1972,11 +1972,11 @@
 
                         <div class="user">
 
-                            <img src="{{ asset('image/user1.jpeg') }}">
+                            <img src="{{ asset('image/default-user.png') }}">
 
                             <div>
 
-                                <h6>Rahul Sharma</h6>
+                                <h6>Om Sharma</h6>
 
                                 <small>Software Engineer</small>
 
@@ -2019,11 +2019,11 @@
 
                         <div class="user">
 
-                            <img src="{{ asset('image/user2.jpg') }}">
+                            <img src="{{ asset('image/default-user.png') }}">
 
                             <div>
 
-                                <h6>Priya Singh</h6>
+                                <h6>Aman Raj</h6>
 
                                 <small>Business Owner</small>
 
@@ -2066,11 +2066,11 @@
 
                         <div class="user">
 
-                            <img src="{{ asset('image/user3.jpg') }}">
+                            <img src="{{ asset('image/default-user.png') }}">
 
                             <div>
 
-                                <h6>Aman Verma</h6>
+                                <h6>Babli Kumari</h6>
 
                                 <small>Freelancer</small>
 
