@@ -49,6 +49,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/expenses', [ExpenseController::class, 'expense']);
     Route::get('/analytics', [AnalyticsController::class, 'analytics']);
     Route::get('/goals', [GoalController::class, 'index'])->name('goals.index');
+    Route::get('/goals/search', [GoalController::class, 'search'])->name('goals.search');
+    Route::get('/goals/summary', [GoalController::class, 'summary'])->name('goals.summary');
     Route::post('/goals', [GoalController::class, 'store'])->name('goals.store');
     Route::get('/goals/{goal}', [GoalController::class, 'show'])->name('goals.show');
     Route::get('/goals/{goal}/edit', [GoalController::class, 'edit'])->name('goals.edit');

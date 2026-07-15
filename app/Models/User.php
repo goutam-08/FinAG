@@ -33,7 +33,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
     public function goals()
     {
-        return $this->hasMany(Goals::class);
-    }}
+        return $this->hasMany(Goal::class);
+    }
+}

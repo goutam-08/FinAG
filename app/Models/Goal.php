@@ -5,8 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
-class Goals extends Model
+class Goal extends Model
 {
+    protected $table = 'goals';
+
     protected $casts = [
         'target_date' => 'date',
         'target_amount' => 'decimal:2',
