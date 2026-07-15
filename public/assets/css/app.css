@@ -206,6 +206,21 @@ li.list-group-item.active {
     }
 }
 
+.goal-card {
+    border-radius: 18px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.goal-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 30px rgba(15, 23, 42, 0.08);
+}
+
+.goal-tab-btn.active {
+    background-color: #16a34a !important;
+    color: #fff !important;
+}
+
 /* Main White Card Container */
 .dashboard-monthly-summ-card {
 

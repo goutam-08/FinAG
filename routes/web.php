@@ -8,7 +8,11 @@ use App\Http\Controllers\CategoriesController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ExpenseController;
+<<<<<<< HEAD
 use App\Http\Controllers\FeatureController;
+=======
+use App\Http\Controllers\GoalController;
+>>>>>>> d895ff2358b3d5549fbe24cba62ba52620d3b475
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\IncomeController;
 use App\Http\Controllers\PricingController;
@@ -49,7 +53,14 @@ Route::middleware('auth')->group(function () {
     Route::post('/budgets', [BudgetsController::class, 'store'])->name('budgets.store');
     Route::get('/expenses', [ExpenseController::class, 'expense']);
     Route::get('/analytics', [AnalyticsController::class, 'analytics']);
-    Route::get('/goals', [AnalyticsController::class, 'goals']);
+    Route::get('/goals', [GoalController::class, 'index'])->name('goals.index');
+    Route::get('/goals/search', [GoalController::class, 'search'])->name('goals.search');
+    Route::get('/goals/summary', [GoalController::class, 'summary'])->name('goals.summary');
+    Route::post('/goals', [GoalController::class, 'store'])->name('goals.store');
+    Route::get('/goals/{goal}', [GoalController::class, 'show'])->name('goals.show');
+    Route::get('/goals/{goal}/edit', [GoalController::class, 'edit'])->name('goals.edit');
+    Route::put('/goals/{goal}', [GoalController::class, 'update'])->name('goals.update');
+    Route::delete('/goals/{goal}', [GoalController::class, 'destroy'])->name('goals.destroy');
     Route::get('/upgrade', [UpgradeController::class, 'upgradeFunc']);
     Route::get('/reports', [ReportsController::class, 'reportsFunc']);
     Route::get('/settings', [SettingsController::class, 'settingsFunc']);

@@ -8,9 +8,4 @@ class AnalyticsController extends Controller
     {
         return view('analytics');
     }
-
-    public function goals()
-    {
-        return view('goals');
-    }
 }
