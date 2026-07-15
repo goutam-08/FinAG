@@ -15,6 +15,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
     {{-- <link rel="stylesheet" href="{{ asset('assets/css/about.css') }}"> --}}
+    <style>
+        .navbar-toggler {
+            background-color: #009e47 !important;
+        }
+    </style>
 
 </head>
 
@@ -40,7 +45,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link {{ request()->is('#features') ? 'active' : '' }}" href="#features"
+                            <a class="nav-link {{ request()->is('features') ? 'active' : '' }}" href="/feature"
                                 id="feature">Features</a>
                         </li>
                         <li class="nav-item">

@@ -55,7 +55,7 @@
                                 stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
                                 stroke-linejoin="round" />
                         </svg>
-                        <span>_Go To Home</span>
+                        <span> Go To Home</span>
                     </a>
                 </div>
 
@@ -167,12 +167,12 @@
                             <i class="bi bi-bullseye me-2"></i>Goals
                         </a>
                     </li>
-
+                    {{-- 
                     <li class="list-group-item {{ request()->is('calendar') ? 'active' : '' }}">
                         <a href="/calendar">
                             <i class="bi bi-calendar-event me-2"></i>Calendar
                         </a>
-                    </li>
+                    </li> --}}
 
                     <li class="list-group-item {{ request()->is('settings') ? 'active' : '' }} ">
                         <a href="/settings">
@@ -183,7 +183,7 @@
                 </ul>
 
                 <div class="mt-4 bg-dark text-center text-white p-3 rounded">
-                    <img src="image/fml_logo.png" width="50" height="38">
+                    <img src="image/logo.png" width="50" height="38">
                     <h6 class="mt-2">Go Premium</h6>
                     <p>Unlock more features and advanced reports</p>
                     <a href="/upgrade" class="btn btn-success">Upgrade Now</a>
